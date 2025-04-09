@@ -151,6 +151,8 @@ func TestSelectChannel(t *testing.T){
 				fmt.Println("Data dari Channel 2", data)
 			}(data)
 			counter++
+		default:
+			fmt.Println("Menunggu data")
 		}
 		if counter == 2 {
 			break;
@@ -159,5 +161,4 @@ func TestSelectChannel(t *testing.T){
 
 	time.Sleep(3 * time.Second)
 
-	// wg.Wait()
 }
